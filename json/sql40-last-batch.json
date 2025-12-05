@@ -1,0 +1,454 @@
+﻿{
+  "questions": [
+    {
+      "question": "Which SQL statement is used to insert multiple rows into a table in a single command?",
+      "options": [
+        "INSERT INTO table VALUES (row1), (row2), (row3)",
+        "INSERT MULTIPLE INTO table",
+        "ADD ROWS TO table",
+        "BATCH INSERT table"
+      ]
+    },
+    {
+      "question": "What happens if you run DELETE without a WHERE clause?",
+      "options": [
+        "All rows in the table are deleted",
+        "Nothing happens",
+        "Only the first row is deleted",
+        "The table structure is deleted but data remains"
+      ]
+    },
+    {
+      "question": "Which statement correctly inserts data into specific columns?",
+      "options": [
+        "INSERT INTO Customers (CustomerName, City) VALUES ('Cardinal', 'Stavanger')",
+        "INSERT Customers VALUES (CustomerName='Cardinal', City='Stavanger')",
+        "INSERT Cardinal, Stavanger INTO Customers (CustomerName, City)",
+        "ADD RECORD TO Customers SET CustomerName='Cardinal', City='Stavanger'"
+      ]
+    },
+    {
+      "question": "What is the difference between DELETE and TRUNCATE?",
+      "options": [
+        "DELETE removes rows one by one, TRUNCATE removes all rows at once",
+        "DELETE is faster than TRUNCATE",
+        "TRUNCATE can be rolled back, DELETE cannot",
+        "DELETE removes table structure, TRUNCATE only removes data"
+      ]
+    },
+    {
+      "question": "How do you update multiple columns in a single UPDATE statement?",
+      "options": [
+        "UPDATE table SET column1=value1, column2=value2 WHERE condition",
+        "UPDATE table SET column1=value1 AND column2=value2 WHERE condition",
+        "UPDATE table column1=value1, column2=value2 WHERE condition",
+        "MODIFY table SET (column1=value1, column2=value2) WHERE condition"
+      ]
+    },
+    {
+      "question": "Which clause is mandatory in an UPDATE statement?",
+      "options": [
+        "SET (to specify what to update)",
+        "WHERE",
+        "FROM",
+        "VALUES"
+      ]
+    },
+    {
+      "question": "What does the RETURNING clause do in an INSERT statement?",
+      "options": [
+        "Returns the inserted row(s)",
+        "Rolls back the transaction if an error occurs",
+        "Checks if the insert was successful",
+        "Inserts the same data into another table"
+      ]
+    },
+    {
+      "question": "How do you delete duplicate rows from a table?",
+      "options": [
+        "DELETE FROM table WHERE id NOT IN (SELECT MIN(id) FROM table GROUP BY duplicate_column)",
+        "REMOVE DUPLICATES FROM table",
+        "DELETE DUPLICATE ROWS FROM table",
+        "DELETE FROM table GROUP BY all_columns HAVING COUNT(*) > 1"
+      ]
+    },
+    {
+      "question": "Which INSERT variation allows inserting data from another table?",
+      "options": [
+        "INSERT INTO table1 SELECT * FROM table2",
+        "INSERT FROM table2 INTO table1",
+        "COPY table2 TO table1",
+        "INSERT INTO table1 VALUES (SELECT * FROM table2)"
+      ]
+    },
+    {
+      "question": "What does ON DELETE CASCADE do?",
+      "options": [
+        "Automatically deletes related rows in child tables when a parent row is deleted",
+        "Prevents deletion if related rows exist",
+        "Creates a backup before deletion",
+        "Logs the deletion in a separate table"
+      ]
+    },
+    {
+      "question": "How do you update data based on values from another table?",
+      "options": [
+        "UPDATE table1 SET column = (SELECT column FROM table2 WHERE condition)",
+        "UPDATE table1, table2 SET table1.column = table2.column",
+        "UPDATE table1 JOIN table2 ON condition SET table1.column = table2.column",
+        "UPDATE FROM table1, table2 SET column = table2.column"
+      ]
+    },
+    {
+      "question": "Which statement inserts NULL values into a column?",
+      "options": [
+        "INSERT INTO table (column1) VALUES (NULL)",
+        "INSERT INTO table (column1) VALUES (EMPTY)",
+        "INSERT INTO table (column1) VALUES (BLANK)",
+        "INSERT INTO table (column1) VALUES (NONE)"
+      ]
+    },
+    {
+      "question": "How do you prevent SQL injection in INSERT statements?",
+      "options": [
+        "Use parameterized queries/prepared statements",
+        "Use double quotes instead of single quotes",
+        "Always use stored procedures",
+        "Delete special characters from input"
+      ]
+    },
+    {
+      "question": "What is an UPSERT operation?",
+      "options": [
+        "INSERT ... ON DUPLICATE KEY UPDATE (or MERGE)",
+        "UPDATE then INSERT",
+        "INSERT with UPPER case",
+        "DELETE then INSERT"
+      ]
+    },
+    {
+      "question": "Which clause in UPDATE prevents updating all rows accidentally?",
+      "options": [
+        "WHERE (specifying specific rows)",
+        "LIMIT",
+        "TOP",
+        "FILTER"
+      ]
+    },
+    {
+      "question": "How do you insert the current timestamp into a column?",
+      "options": [
+        "INSERT INTO table (timestamp_column) VALUES (CURRENT_TIMESTAMP)",
+        "INSERT INTO table (timestamp_column) VALUES (NOW())",
+        "INSERT INTO table (timestamp_column) VALUES (GETDATE())",
+        "All of the above (depending on database system)"
+      ]
+    },
+    {
+      "question": "What happens if INSERT violates a UNIQUE constraint?",
+      "options": [
+        "The insert fails with an error",
+        "The duplicate row is automatically updated",
+        "The constraint is temporarily disabled",
+        "Only the first occurrence is inserted"
+      ]
+    },
+    {
+      "question": "How do you delete rows from multiple tables in a single statement?",
+      "options": [
+        "DELETE t1, t2 FROM table1 t1 JOIN table2 t2 ON condition",
+        "DELETE FROM table1, table2 WHERE condition",
+        "DELETE MULTIPLE table1, table2",
+        "DELETE ALL FROM table1 AND table2"
+      ]
+    },
+    {
+      "question": "Which INSERT statement is most efficient for bulk data?",
+      "options": [
+        "BULK INSERT or LOAD DATA INFILE (database-specific)",
+        "Multiple INSERT VALUES statements",
+        "Individual INSERT statements in a loop",
+        "INSERT with UNION ALL"
+      ]
+    },
+    {
+      "question": "How do you update a column by incrementing its current value?",
+      "options": [
+        "UPDATE table SET counter = counter + 1 WHERE id = 1",
+        "UPDATE table SET counter = 1+ WHERE id = 1",
+        "UPDATE table SET counter++ WHERE id = 1",
+        "UPDATE table INCREMENT counter BY 1 WHERE id = 1"
+      ]
+    },
+    {
+      "question": "What does the OUTPUT clause do in SQL Server for DML operations?",
+      "options": [
+        "Returns information about each row affected by INSERT/UPDATE/DELETE",
+        "Optimizes the query execution",
+        "Creates a backup of affected rows",
+        "Logs the operation to a file"
+      ]
+    },
+    {
+      "question": "How do you insert default values into a table?",
+      "options": [
+        "INSERT INTO table DEFAULT VALUES",
+        "INSERT INTO table VALUES (DEFAULT)",
+        "INSERT DEFAULT INTO table",
+        "Both A and B (depending on database system)"
+      ]
+    },
+    {
+      "question": "Which DELETE statement deletes rows based on a subquery?",
+      "options": [
+        "DELETE FROM table WHERE id IN (SELECT id FROM other_table)",
+        "DELETE FROM table JOIN other_table ON condition",
+        "DELETE USING table, other_table WHERE condition",
+        "DELETE FROM table SUBQUERY (SELECT FROM other_table)"
+      ]
+    },
+    {
+      "question": "How do you update a JSON field in a column?",
+      "options": [
+        "UPDATE table SET json_column = JSON_SET(json_column, '$.key', 'value')",
+        "UPDATE table SET json_column->'key' = 'value'",
+        "UPDATE table SET json_column.key = 'value'",
+        "UPDATE table MODIFY json_column SET key = 'value'"
+      ]
+    },
+    {
+      "question": "What is a MERGE statement?",
+      "options": [
+        "Combines INSERT, UPDATE, and DELETE operations based on conditions",
+        "Merges two tables into one",
+        "Combines two SELECT statements",
+        "Updates all rows to the same value"
+      ]
+    },
+    {
+      "question": "How do you insert a row and get the auto-generated ID back?",
+      "options": [
+        "INSERT ... RETURNING id (or SELECT SCOPE_IDENTITY() or LAST_INSERT_ID())",
+        "INSERT ... GET ID",
+        "INSERT ... THEN SELECT ID",
+        "INSERT ... OUTPUT INSERTED.id"
+      ]
+    },
+    {
+      "question": "Which UPDATE statement uses a CASE expression?",
+      "options": [
+        "UPDATE table SET column = CASE WHEN condition THEN value1 ELSE value2 END",
+        "UPDATE table CASE column WHEN condition THEN value1 ELSE value2",
+        "UPDATE table IF condition SET column = value1 ELSE value2",
+        "UPDATE table SET column = IF(condition, value1, value2)"
+      ]
+    },
+    {
+      "question": "How do you delete all rows older than 30 days?",
+      "options": [
+        "DELETE FROM table WHERE date_column < DATE_SUB(NOW(), INTERVAL 30 DAY)",
+        "DELETE FROM table WHERE date_column > NOW() - 30",
+        "DELETE FROM table WHERE date_column OLDER THAN 30 DAYS",
+        "DELETE FROM table FILTER date_column PAST 30 DAYS"
+      ]
+    },
+    {
+      "question": "Which INSERT statement handles errors gracefully?",
+      "options": [
+        "INSERT ... ON CONFLICT DO NOTHING (PostgreSQL) or INSERT ... IGNORE (MySQL)",
+        "INSERT ... TRY CATCH",
+        "INSERT ... ERROR CONTINUE",
+        "INSERT ... SKIP ON ERROR"
+      ]
+    },
+    {
+      "question": "How do you update a BIT/BOOLEAN column?",
+      "options": [
+        "UPDATE table SET active = 1 WHERE id = 1",
+        "UPDATE table SET active = TRUE WHERE id = 1",
+        "UPDATE table SET active = 'true' WHERE id = 1",
+        "All of the above (depending on database system)"
+      ]
+    },
+    {
+      "question": "What does ROLLBACK do after a DELETE?",
+      "options": [
+        "Undoes the delete operation if within a transaction",
+        "Deletes additional rows",
+        "Confirms the deletion",
+        "Creates a backup of deleted rows"
+      ]
+    },
+    {
+      "question": "How do you insert hierarchical data (parent-child relationships)?",
+      "options": [
+        "INSERT parent; then INSERT child with parent's ID",
+        "INSERT HIERARCHY parent, child",
+        "INSERT NESTED parent (child VALUES)",
+        "INSERT parent AND child SIMULTANEOUSLY"
+      ]
+    },
+    {
+      "question": "Which DELETE statement is fastest for large tables?",
+      "options": [
+        "TRUNCATE TABLE (if you want to delete all rows)",
+        "DELETE FROM table",
+        "DELETE ALL table",
+        "DROP AND RECREATE table"
+      ]
+    },
+    {
+      "question": "How do you update a column with a random value?",
+      "options": [
+        "UPDATE table SET column = RAND()",
+        "UPDATE table SET column = RANDOM()",
+        "UPDATE table SET column = NEWID() (for UUID)",
+        "Both A and C (depending on need)"
+      ]
+    },
+    {
+      "question": "What does INSERT IGNORE do in MySQL?",
+      "options": [
+        "Skips rows that would cause duplicate key errors",
+        "Inserts NULL for all errors",
+        "Rolls back the entire insert on any error",
+        "Logs errors but continues"
+      ]
+    },
+    {
+      "question": "How do you delete rows with a JOIN?",
+      "options": [
+        "DELETE t1 FROM table1 t1 JOIN table2 t2 ON t1.id = t2.id",
+        "DELETE FROM table1 USING table2 WHERE table1.id = table2.id",
+        "DELETE JOIN table1, table2 ON condition",
+        "DELETE table1.* FROM table1 INNER JOIN table2 ON condition"
+      ]
+    },
+    {
+      "question": "Which UPDATE statement uses a correlated subquery?",
+      "options": [
+        "UPDATE table1 SET col = (SELECT col FROM table2 WHERE table2.id = table1.id)",
+        "UPDATE table1, table2 SET table1.col = table2.col WHERE table1.id = table2.id",
+        "UPDATE FROM table1 INNER JOIN table2 ON table1.id = table2.id SET table1.col = table2.col",
+        "All of the above can work"
+      ]
+    },
+    {
+      "question": "How do you insert data only if it doesn't exist?",
+      "options": [
+        "INSERT ... WHERE NOT EXISTS (SELECT 1 FROM table WHERE condition)",
+        "INSERT IF NOT EXISTS ...",
+        "INSERT UNIQUE ...",
+        "INSERT AVOID DUPLICATE ..."
+      ]
+    },
+    {
+      "question": "What is a CTE (Common Table Expression) used with DELETE?",
+      "options": [
+        "WITH cte AS (SELECT id FROM table WHERE condition) DELETE FROM table WHERE id IN (SELECT id FROM cte)",
+        "DELETE CTE FROM table",
+        "DELETE USING CTE table",
+        "DELETE FROM CTE table"
+      ]
+    },
+    {
+      "question": "How do you update all rows to have sequential numbers?",
+      "options": [
+        "UPDATE table SET id = ROW_NUMBER() OVER (ORDER BY id) (may require CTE/temp table)",
+        "UPDATE table SET id = SEQUENCE()",
+        "UPDATE table SEQUENTIAL id",
+        "UPDATE table ORDER BY id SET id = ROW_NUMBER()"
+      ]
+    },
+    {
+      "question": "Which INSERT statement uses a UNION ALL?",
+      "options": [
+        "INSERT INTO table SELECT ... UNION ALL SELECT ...",
+        "INSERT UNION ALL INTO table VALUES ...",
+        "INSERT INTO table UNION ALL VALUES ...",
+        "INSERT ALL INTO table UNION SELECT ..."
+      ]
+    },
+    {
+      "question": "How do you delete rows in batches to avoid locking?",
+      "options": [
+        "DELETE TOP(1000) FROM table WHERE condition (SQL Server) or LIMIT in other DBs",
+        "DELETE BATCH 1000 FROM table",
+        "DELETE FROM table WHERE condition CHUNK 1000",
+        "DELETE FROM table WHERE condition IN BATCHES OF 1000"
+      ]
+    },
+    {
+      "question": "What does ON UPDATE SET NULL do?",
+      "options": [
+        "Sets foreign key columns to NULL when referenced parent row is updated",
+        "Prevents updates to parent rows",
+        "Deletes child rows when parent is updated",
+        "Updates child rows with parent's new value"
+      ]
+    },
+    {
+      "question": "How do you insert a row with an encrypted password?",
+      "options": [
+        "INSERT INTO users (username, password) VALUES ('user', ENCRYPT('pass'))",
+        "INSERT INTO users (username, password) VALUES ('user', 'pass' ENCRYPTED)",
+        "INSERT ENCRYPTED INTO users VALUES ('user', 'pass')",
+        "INSERT INTO users (username, password) ENCRYPT VALUES ('user', 'pass')"
+      ]
+    },
+    {
+      "question": "Which DELETE statement uses a window function?",
+      "options": [
+        "DELETE FROM (SELECT *, ROW_NUMBER() OVER (PARTITION BY col ORDER BY id) rn FROM table) WHERE rn > 1",
+        "DELETE WINDOW FUNCTION FROM table",
+        "DELETE DUPLICATES USING ROW_NUMBER()",
+        "DELETE FROM table WHERE ROW_NUMBER() > 1"
+      ]
+    },
+    {
+      "question": "How do you update a column with its own value modified?",
+      "options": [
+        "UPDATE table SET text_column = CONCAT(text_column, ' suffix')",
+        "UPDATE table SET text_column = text_column || ' suffix'",
+        "UPDATE table SET text_column += ' suffix'",
+        "All of the above (depending on database)"
+      ]
+    },
+    {
+      "question": "What does INSERT ... SELECT do?",
+      "options": [
+        "Inserts rows selected from another table or query",
+        "Selects data after inserting",
+        "Checks if insert was successful",
+        "Inserts the result of a SELECT into a variable"
+      ]
+    },
+    {
+      "question": "How do you delete rows with a specific pattern in a column?",
+      "options": [
+        "DELETE FROM table WHERE column LIKE '%pattern%'",
+        "DELETE FROM table WHERE column CONTAINS 'pattern'",
+        "DELETE FROM table WHERE column HAS 'pattern'",
+        "DELETE FROM table PATTERN column = 'pattern'"
+      ]
+    },
+    {
+      "question": "Which UPDATE statement updates from a VALUES list?",
+      "options": [
+        "UPDATE table SET col = v.col FROM (VALUES (1, 'A'), (2, 'B')) AS v(id, col) WHERE table.id = v.id",
+        "UPDATE table FROM VALUES (1, 'A'), (2, 'B')",
+        "UPDATE table SET col = VALUES(col) FROM list",
+        "UPDATE table USING VALUES (1, 'A'), (2, 'B')"
+      ]
+    },
+    {
+      "question": "How do you insert with error logging for failed rows?",
+      "options": [
+        "INSERT INTO table SELECT ... LOG ERRORS INTO err_table",
+        "INSERT INTO table SELECT ... CATCH ERRORS",
+        "INSERT INTO table SELECT ... WITH ERROR LOGGING",
+        "INSERT INTO table SELECT ... OUTPUT ERRORS"
+      ]
+    }
+  ]
+}

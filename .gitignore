@@ -1,0 +1,58 @@
+# .gitignore
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+/IgnoredSandbox
+
+
+/API-keys
+/workflows
+
+# Node modules (ignore in all locations)
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+**/node_modules/
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# Miscellaneous
+.angular/cache/
+.sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+testem.log
+typings/
+
+# System files
+.DS_Store
+Thumbs.db
+backend/.env
+frontend/.env.development
+frontend/.env.production
+frontend/.env.staging
+backend.zip
+backend.7z
+frontend.zip
