@@ -61,16 +61,6 @@
       "answer": "SET (to specify what to update)"
     },
     {
-      "question": "What does the RETURNING clause do in an INSERT statement?",
-      "options": [
-        "Checks if the insert was successful",
-        "Inserts the same data into another table",
-        "Rolls back the transaction if an error occurs",
-        "Returns the inserted row(s)"
-      ],
-      "answer": "Returns the inserted row(s)"
-    },
-    {
       "question": "How do you delete duplicate rows from a table?",
       "options": [
         "DELETE DUPLICATE ROWS FROM table",
@@ -489,6 +479,16 @@
         "UPDATE table SET col = v.col FROM (VALUES (1, 'A'), (2, 'B')) AS v(id, col) WHERE table.id = v.id"
       ],
       "answer": "UPDATE table SET col = v.col FROM (VALUES (1, 'A'), (2, 'B')) AS v(id, col) WHERE table.id = v.id"
+    },
+    {
+      "question": "What does the RETURNING clause do in an INSERT statement?",
+      "options": [
+        "Checks if the insert was successful",
+        "Inserts the same data into another table",
+        "Rolls back the transaction if an error occurs",
+        "Returns the inserted row(s)"
+      ],
+      "answer": "Returns the inserted row(s)"
     },
     {
       "question": "How do you insert with error logging for failed rows?",
